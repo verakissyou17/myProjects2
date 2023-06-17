@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+}
+
+body {
+  background-image: url(../images/starry-sky-background-lhqapcdicxkik7c7.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  
+}
+
+.sun {
+  position: relative;
+  top: 200px;
+  left: 600px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(yellow,  orange );
+  border-radius: 50%;
+}
+.moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(-200deg, gray, darkgray, yellow);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: orbit 15s linear infinite;
+}
+@keyframes orbit {
+ from {
+  transform: rotate(0deg)
+  translateX(200px);
+ }
+ to {
+  transform: rotate(360deg) 
+  translateX(200px);
+ }
+}
+
+@media (max-width: 650px) {
+  .sun {
+    left: 200px;
+  }
+};
+
+@media (max-width: 950px) {
+  .sun {
+    left: 400px;
+  }
+};
